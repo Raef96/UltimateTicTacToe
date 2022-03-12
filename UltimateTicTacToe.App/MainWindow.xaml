@@ -6,6 +6,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:UltimateTicTacToe.App"
+        xmlns:views="clr-namespace:UltimateTicTacToe.App.Views"
         mc:Ignorable="d"
         Title="Ultimate Tic Tac Toe" Height="450" Width="800"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
@@ -74,8 +75,8 @@
         </StackPanel>
         
         <!-- Board for Tic Tac Toe -->
-        
 
+        <views:SmallBoard Grid.Row="1" Grid.ColumnSpan="3"/>
 
     </Grid>
 </mah:MetroWindow>

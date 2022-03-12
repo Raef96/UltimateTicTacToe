@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:UltimateTicTacToe.App.Views"
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="500">
-    <Grid>
+
+    <Grid x:Name="boardCells">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -18,17 +19,17 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="Button0_0" Content="" Grid.Row="0" Grid.Column="0"/>
-        <Button x:Name="Button0_1" Content="" Grid.Row="0" Grid.Column="1"/>
-        <Button x:Name="Button0_2" Content="" Grid.Row="0" Grid.Column="2"/>
-        
-        <Button x:Name="Button1_0" Content="" Grid.Row="1" Grid.Column="0"/>
-        <Button x:Name="Button1_1" Content="" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="Button1_2" Content="" Grid.Row="1" Grid.Column="2"/>
-        
-        <Button x:Name="Button2_0" Content="" Grid.Row="2" Grid.Column="0"/>
-        <Button x:Name="Button2_1" Content="" Grid.Row="2" Grid.Column="1"/>
-        <Button x:Name="Button2_2" Content="" Grid.Row="2" Grid.Column="2"/>
+        <Button x:Name="Button0_0" Content="" Click="MakeMove" Grid.Row="0" Grid.Column="0"/>
+        <Button x:Name="Button0_1" Content="" Click="MakeMove" Grid.Row="0" Grid.Column="1"/>
+        <Button x:Name="Button0_2" Content="" Click="MakeMove" Grid.Row="0" Grid.Column="2"/>
+                                               
+        <Button x:Name="Button1_0" Content="" Click="MakeMove" Grid.Row="1" Grid.Column="0"/>
+        <Button x:Name="Button1_1" Content="" Click="MakeMove" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="Button1_2" Content="" Click="MakeMove" Grid.Row="1" Grid.Column="2"/>
+                                               
+        <Button x:Name="Button2_0" Content="" Click="MakeMove" Grid.Row="2" Grid.Column="0"/>
+        <Button x:Name="Button2_1" Content="" Click="MakeMove" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="Button2_2" Content="" Click="MakeMove" Grid.Row="2" Grid.Column="2"/>
         
     </Grid>
 </UserControl>
