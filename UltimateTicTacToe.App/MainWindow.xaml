@@ -1,0 +1,81 @@
+﻿<mah:MetroWindow  x:Class="UltimateTicTacToe.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:UltimateTicTacToe.App"
+        mc:Ignorable="d"
+        Title="Ultimate Tic Tac Toe" Height="450" Width="800"
+        GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5">
+            <Label Content="Player X"/>
+            <ComboBox>
+                <ComboBoxItem Content="Human"/>
+                <ComboBoxItem Content="Bot"/>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal"
+                        Margin="5"
+                        IsEnabled="False">
+                <Label Content="Level"/>
+                <ComboBox Width="100">
+                    <ComboBoxItem Content="Easy"/>
+                    <ComboBoxItem Content="Medium"/>
+                    <ComboBoxItem Content="Hard"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="5">
+            <Label Content="Player O"/>
+            <ComboBox>
+                <ComboBoxItem Content="Human"/>
+                <ComboBoxItem Content="Bot"/>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal"
+                        Margin="5"
+                        IsEnabled="False">
+                <Label Content="Level"/>
+                <ComboBox Width="100">
+                    <ComboBoxItem Content="Easy"/>
+                    <ComboBoxItem Content="Medium"/>
+                    <ComboBoxItem Content="Hard"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="5">
+            <RadioButton Content="Tic Tac Toe" 
+                         Padding="5,5,5,5"/>
+            <RadioButton Content="Ultimate Tic Tac Toe"/>
+            <Button Content="Start Game" Margin="5"/>
+        </StackPanel>
+        
+        <!-- Board for Tic Tac Toe -->
+        
+
+
+    </Grid>
+</mah:MetroWindow>
