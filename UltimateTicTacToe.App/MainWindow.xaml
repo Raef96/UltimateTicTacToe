@@ -29,19 +29,16 @@
                     Grid.Column="0"
                     Margin="5">
             <Label Content="Player X"/>
-            <ComboBox>
-                <ComboBoxItem Content="Human"/>
-                <ComboBoxItem Content="Bot"/>
-            </ComboBox>
+            <ComboBox x:Name="cbPlayerX" 
+                      SelectedItem="{Binding NplayerX }"/>
+
             <StackPanel Orientation="Horizontal"
                         Margin="5"
-                        IsEnabled="False">
+                        IsEnabled="{Binding PlayerXIsBot}">
                 <Label Content="Level"/>
-                <ComboBox Width="100">
-                    <ComboBoxItem Content="Easy"/>
-                    <ComboBoxItem Content="Medium"/>
-                    <ComboBoxItem Content="Hard"/>
-                </ComboBox>
+                <ComboBox Width="100" x:Name="cbPlayerXLevel"
+                          SelectedItem="{Binding PalyerXStrength}"/>
+
             </StackPanel>
         </StackPanel>
         
@@ -49,29 +46,31 @@
                     Grid.Column="1"
                     Margin="5">
             <Label Content="Player O"/>
-            <ComboBox>
-                <ComboBoxItem Content="Human"/>
-                <ComboBoxItem Content="Bot"/>
-            </ComboBox>
+            <ComboBox x:Name="cbPlayerO"
+                      SelectedItem="{Binding NplayerO}"/>
+
             <StackPanel Orientation="Horizontal"
                         Margin="5"
-                        IsEnabled="False">
+                        IsEnabled="{Binding PlayerOIsBot}">
                 <Label Content="Level"/>
-                <ComboBox Width="100">
-                    <ComboBoxItem Content="Easy"/>
-                    <ComboBoxItem Content="Medium"/>
-                    <ComboBoxItem Content="Hard"/>
-                </ComboBox>
+                <ComboBox x:Name="cbPlayerOLevel" Width="100"
+                          SelectedItem="{Binding PalyerOStrength}"/>
+
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Row="0"
                     Grid.Column="2"
                     Margin="5">
-            <RadioButton Content="Tic Tac Toe" 
-                         Padding="5,5,5,5"/>
-            <RadioButton Content="Ultimate Tic Tac Toe"/>
-            <Button Content="Start Game" Margin="5"/>
+            <RadioButton Content="{Binding TTT}" 
+                         Padding="5"
+                         IsChecked="{Binding IsTicTacToe}"/>
+            <RadioButton Content="{Binding UTTT}"
+                         Padding="5"
+                         IsChecked="{Binding IsUltimateTicTacToe}" />
+            <Button Content="Start Game" Margin="5"
+                    IsEnabled="{Binding CanStartGame}"
+                    Command="{Binding Start}"/>
         </StackPanel>
         
         <!-- Board for Tic Tac Toe -->
